@@ -1,6 +1,6 @@
 {
   "name": "log-pipe",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Pipe stdin to a logfile with optional log rotation parameters",
   "bin": {
     "log-pipe": "./index.js"
