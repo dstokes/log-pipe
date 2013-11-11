@@ -1,0 +1,31 @@
+{
+  "name": "log-pipe",
+  "version": "0.0.1",
+  "description": "Pipe stdin to a logfile with optional log rotation parameters",
+  "bin": {
+    "log-pipe": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Drew Stokes",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "optimist": "~0.6.0",
+    "split": "~0.2.10",
+    "log-rotate": "~0.1.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dstokes/log-pipe.git"
+  },
+  "keywords": [
+    "log",
+    "rotate",
+    "pipe"
+  ],
+  "bugs": {
+    "url": "https://github.com/dstokes/log-pipe/issues"
+  }
+}
