@@ -17,7 +17,7 @@ var lines = 0
   , maxlines = (args.lines || 30000);
 
 // create initial writeStream
-var ws = fs.createWriteStream(logfile);
+var ws = fs.createWriteStream(logfile, { flags: 'a' });
 
 // split stdin by newline
 process.stdin.pipe(split()).on('data', function onData(line) {
@@ -39,7 +39,7 @@ process.stdin.pipe(split()).on('data', function onData(line) {
 
   rotate(logfile, { count: args.count }, function onRotate(err) {
     // reopen the write stream
-    ws = fs.createWriteStream(logfile);
+    ws = fs.createWriteStream(logfile, { flags: 'a' });
 
     // update data
     lines = 0;
