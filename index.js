@@ -14,6 +14,7 @@ var lines = 0
   , buffer = []
   , paused = false
   , logfile = args._.shift()
+  , compress = typeof args.compress !== 'undefined'
   , maxlines = (args.lines || 30000);
 
 // create initial writeStream
@@ -37,7 +38,7 @@ process.stdin.pipe(split()).on('data', function onData(line) {
   // close the existing writeStream
   ws.close();
 
-  rotate(logfile, { count: args.count }, function onRotate(err) {
+  rotate(logfile, { count: args.count, compress: compress }, function onRotate(err) {
     // reopen the write stream
     ws = fs.createWriteStream(logfile, { flags: 'a' });
 
