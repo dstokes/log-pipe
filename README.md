@@ -8,7 +8,7 @@ Pipe stdin to a logfile with optional log rotation parameters
 Example
 =======
 ``` sh
-node index.js 2>&1 | log-pipe app.log --count 3 --lines 15
+node index.js 2>&1 | log-pipe app.log --count 3 --lines 15 --compress
 ```
 
 options
@@ -20,6 +20,9 @@ files after `count` will be deleted.
 
 ### lines
 The maximum number of log lines before a rotation occurrs.
+
+### compress
+Compress rotated files with gzip
 
 install
 =======
