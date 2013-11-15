@@ -1,9 +1,9 @@
+### This project has been moved over to [logrotate-stream](https://github.com/dstokes/logrotate-stream/)
+
 log-pipe
 ========
 
 Pipe stdin to a logfile with optional log rotation parameters
-
-[![NPM](https://nodei.co/npm/log-pipe.png?downloads=true)](https://nodei.co/npm/log-pipe/)  
 
 example
 =======
